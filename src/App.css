@@ -1,0 +1,72 @@
+:root{
+
+    /*variables para tipografia*/
+
+    --font-titulo: "Gabarito", sans-serif;
+    --font-texto: "Montserrat", sans-serif;
+
+    /*variables para colores*/
+
+    --color-claro: #CCEF8E;
+    --color-oscuro: #00843D;
+    --color-negro: #242424;
+    --color-blanco: #fafafa;
+
+
+
+    --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
+    --item1-filter: blur(30px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
+
+    --item2-transform: translateX(0);
+    --item2-filter: blur(0px);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    --item3-transform: translate(50%,10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+
+    --item4-transform: translate(90%,20%) scale(0.5);
+    --item4-filter: blur(30px);
+    --item4-zIndex: 8;
+    --item4-opacity: 1;
+    
+    --item5-transform: translate(120%,30%) scale(0.3);
+    --item5-filter: blur(40px);
+    --item5-zIndex: 7;
+    --item5-opacity: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-blanco);
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#CCEF8E), to(#00843D));
+    background-image: -webkit-linear-gradient(bottom, #CCEF8E 0%, #00843D 100%);
+    background-image: linear-gradient(to top, #CCEF8E 0%, #00843D 100%);
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #242424;
+  }
+
+

@@ -1,0 +1,248 @@
+/*contenedor del componente*/
+.footer{
+    width: 100%;
+    min-height: 40svh;
+    background-image: url('/footer.webp');
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+/*fila superior*/
+.footer-top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 5rem;
+}
+
+/*logo*/
+.footer-top_logo{
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.footer-top_logo img{
+    width: 100%;
+    height: 100%;
+}
+
+/*iconos a redes sociales*/
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/*iconos*/
+.footer-socials a img{
+    width: 40px;
+    height: auto;
+}
+
+/*texto*/
+.footer-socials a p{
+    font-family: var(--font-texto);
+    font-size: clamp(1rem, 0.8733rem + 0.264vw, 1.2rem);
+    color: var(--color-blanco);
+    font-weight: 500;
+}
+
+/*navegador*/
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+/*links*/
+.footer-links a {
+    text-decoration: none;
+    font-family: var(--font-texto);
+    color: var(--color-blanco);
+    font-size: clamp(1rem, 0.8099rem + 0.396vw, 1.3rem);
+    font-weight: 500;
+    transition: transform 250ms ease-in-out;
+}
+
+.footer-links a:after {
+    display: block;
+    content: '';
+    margin-top: 0.2rem;
+    border-bottom: solid 3px var(--color-claro);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+  
+.footer-links a:hover:after {
+    transform: scaleX(1);
+}
+
+/*linea divisoria*/
+.footer-line{
+    width: 100%;
+    height: 2px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    background: var(--color-claro);
+}
+
+/*contenedor de copyright y link a pagina de la agencia*/
+.footer-copy{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-texto);
+    color: var(--color-blanco);
+    font-weight: 500;
+    font-size: clamp(0.9rem, 0.8366rem + 0.132vw, 1rem);
+}
+
+.footer-copy a{
+    text-decoration: none;
+    font-weight: 550;
+    color: var(--color-claro);
+}
+
+
+/*diseño adaptable*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+    .footer{
+        min-height: fit-content;
+        padding: 3rem 2rem;
+    }
+
+    .footer-top{
+        padding-top: 3rem;
+    }
+
+    /*iconos*/
+    .footer-socials a img{
+        width: 35px;
+        height: auto;
+    }
+
+    /*iconos a redes sociales*/
+    .footer-socials{
+        gap: 0.7rem;
+    }
+
+    /*linea divisoria*/
+    .footer-line{
+        margin: 3rem 0;
+    }
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+    .footer{
+        padding: 3rem 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .footer-top{
+        padding-top: 2rem;
+    }
+
+    /*iconos*/
+    .footer-socials a img{
+        width: 30px;
+        height: auto;
+    }
+
+    /*iconos a redes sociales*/
+    .footer-socials{
+        gap: 0.5rem;
+    }
+
+    /*navegador*/
+    .footer-links{
+        display: none;
+    }
+
+    /*logo*/
+    .footer-top_logo{
+        width: 400px;
+        height: auto;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding-top: 1.5rem;
+    }
+
+    /*logo*/
+    .footer-top_logo{
+        max-width: 350px;
+        width: fit-content;
+        height: auto;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    /*iconos a redes sociales*/
+    .footer-socials{
+        gap: 0.7rem;
+        margin: 0;
+    }
+
+    /*navegador*/
+    .footer-links{
+        align-items: center;
+        margin: 0;
+        gap: 0.3rem;
+    }
+
+    /*contenedor de copyright y link a pagina de la agencia*/
+    .footer-copy{
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: clamp(0.7rem, -0.06rem + 3.2vw, 0.9rem);
+    }
+
+    /*linea divisoria*/
+    .footer-line{
+        margin: 1.5rem 0;
+        margin-top: 2.5rem;
+    }
+
+
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+    
+    .footer-copy p{
+        text-align: center;
+    }
+}

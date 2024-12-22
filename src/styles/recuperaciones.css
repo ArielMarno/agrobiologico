@@ -1,0 +1,174 @@
+/*contenedor del componente*/
+.recuperaciones{
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5rem 3rem;
+}
+
+/*contendor del titulo y subtitulo*/
+.titulo-recuperaciones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*titulo*/
+.titulo-recuperaciones h2{
+    font-family: var(--font-titulo);
+    font-size: clamp(3rem, 1.7327rem + 2.6403vw, 5rem);
+    font-weight: 600;
+    color: var(--color-negro);
+}
+
+/*subtitulo*/
+.titulo-recuperaciones h3{
+    font-family: var(--font-texto);
+    font-size: clamp(1.5rem, 1.3099rem + 0.396vw, 1.7rem);
+    font-weight: 500;
+    text-align: center;
+    max-width: 730px;
+}
+
+/*contenedor de tarjetas*/
+.contenedor-tarjetas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/*tarjetas*/
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    max-width: 500px;
+    height: auto;
+    max-height: 680px;
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*imagen*/
+.tarjetas img{
+    width: 100%;
+    height: auto;
+    border-radius: 14.5px;
+}
+
+/*titulo*/
+.tarjetas h4{
+    font-family: var(--font-titulo);
+    font-size: clamp(1.2rem, 1.0099rem + 0.396vw, 1.5rem);
+    color: var(--color-oscuro);
+    font-weight: 600;
+    padding: 1rem 0;
+    text-align: center;
+    max-width: 400px;
+
+}
+
+/*subtitulo*/
+.tarjetas p{
+    font-family: var(--font-texto);
+    font-size: clamp(1rem, 0.8099rem + 0.396vw, 1.3rem);
+    font-weight: 500;
+    color: var(--color-negro);
+    max-width: 95%;
+    text-align: center;
+}
+
+/*diseño adaptable*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1250px){
+
+    /*contenedor del componente*/
+    .recuperaciones{
+        padding: 3rem 2rem;
+    }
+
+    /*contenedor de tarjetas*/
+    .contenedor-tarjetas{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .tarjetas p{
+        max-width: 100%;
+    }
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+    /*contenedor del componente*/
+    .recuperaciones{
+        padding: 3rem 1.5rem;
+    }
+
+    .contenedor-tarjetas{
+        gap: 1.5rem;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+    /*contenedor del componente*/
+    .recuperaciones{
+        gap: 3rem;
+        padding: 3rem 1rem;
+    }
+
+    .titulo-recuperaciones{
+        gap: 1rem;
+    }
+
+    .titulo-recuperaciones h2{
+        text-align: center;
+        font-size: 3rem;
+        line-height: 47px;
+    }
+
+    .titulo-recuperaciones h3{
+        font-size: 1.3rem;
+        max-width: 90%;
+    }
+
+    /*contenedor de tarjetas*/
+    .contenedor-tarjetas{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .tarjetas{
+        padding: 0.5rem;
+    }
+
+    .tarjetas p{
+        font-size: clamp(1rem, 0.8036rem + 0.8269vw, 1.2rem);
+        font-weight: 550;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    /*contenedor del componente*/
+    .recuperaciones{
+        gap: 2rem;
+    }
+
+    .titulo-recuperaciones h2{
+        max-width: 240px;
+    }
+}

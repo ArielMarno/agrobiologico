@@ -1,0 +1,236 @@
+/*contenedor*/
+.ensayos{
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    gap: 3rem;
+    padding: 3rem;
+    background-image: url('/textura2.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+/*contenedor titulo y subtitulo*/
+.ensayos__title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/*titulo*/
+.ensayos__title h2{
+    font-family: var(--font-titulo);
+    font-size: clamp(6rem, 3.4286rem + 2.8571vw, 7rem);
+    font-weight: 500;
+    text-align: center;
+    line-height: 100px;
+    color: #242424;
+}
+
+/*subtitulo*/
+.ensayos__title p{
+    font-family: var(--font-texto);
+    font-size: 2rem;
+    font-weight: 500;
+    max-width: 700px;
+    text-align: center;
+    color: var(--color-negro);
+}
+
+/*grilla de tarjetas*/
+.ensayos__grid{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows: 290px;
+    gap: 1rem;
+    justify-items: center;
+}
+
+/*variación en tamaño de la primer tarjeta(ocupa dos filas)*/
+.ensayos__grid .card-col:nth-child(1){
+    grid-row-start: span 2;
+}
+
+/*boton descargar*/
+.ensayos__grid .vr-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/*link y texto*/
+.ensayos__grid .vr-btn a{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: var(--font-texto);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-negro);
+    background: none;
+    padding: 0.5rem 1rem;
+} 
+
+.ensayos__grid .vr-btn a p{
+    border-bottom: 2.5px solid var(--color-negro);
+}
+
+/*icono flecha de descarga*/
+.ensayos__grid .vr-btn .arrow {
+    width: 20px;
+    height: auto;
+}
+
+/*titulo de tarjetas*/
+.card-col h3, .card-row h3{
+    font-family: var(--font-titulo);
+    font-size: clamp(2.5rem, 1.5495rem + 1.9802vw, 4rem);
+    font-weight: 600;
+    line-height: 0.8em;
+    max-width: 250px;
+    color: var(--color-negro);
+}
+
+/*tarjeta en columna*/
+.card-col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgb(223, 228, 223, 0.3);
+    padding: 3rem 1.5rem;
+    border-radius: 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*orientación de elementos columna*/
+.card-col .aside_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/*tarjetas en fila*/
+.card-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    background: rgb(223, 228, 223, 0.3);
+    padding: 2rem 1.5rem;
+    border-radius: 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*orientación de elementos fila*/
+.card-row .aside_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+/*imagenes en tarjetas*/
+.card-row img {
+    max-width: 180px;
+    height: auto;
+    align-self: flex-end;
+}
+
+.card-col img{
+    max-width: 250px;
+    height: auto;
+    align-self: flex-end;
+}
+
+
+/*diseño adaptable*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1300px){
+
+    .ensayos__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px;
+        gap: 1rem;
+        justify-items: center;
+    }
+
+    .ensayos__title p{
+        max-width: 450px;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .ensayos{
+        min-height: 80svh;
+        gap: 2.5rem;
+        padding: 3rem 1rem;
+        margin-top: 5rem;
+    }
+
+    .ensayos__title h2{
+        font-size: 4.5rem;
+        line-height: 70px;
+    }
+    
+    .ensayos__title p{
+        font-size: 1.5rem;
+        max-width: 350px;
+    }
+
+    .card-col, .card-row{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .card-col h3, .card-row h3{
+        font-size: 3rem;
+        line-height: 6svh;
+        max-width: 100%;
+        text-align: center;
+        align-self: center;
+    }
+
+    .card-row br{
+        display: none;
+    }
+
+    .card-col img, .card-row img{
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    .ensayos{
+        gap: 3rem;
+        padding: 3rem 0.5rem;
+    }
+
+    .card-col img, .card-row img{
+        max-width: 280px;
+        height: auto;
+    }
+
+    .card-col h3, .card-row h3{
+        line-height: 7svh;
+    }
+}

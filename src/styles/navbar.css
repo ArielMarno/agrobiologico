@@ -1,0 +1,200 @@
+/*contenedor principal*/
+.nav{
+    width: 100%;
+    min-height: 10svh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+    z-index: 3;
+}
+
+/*ocultar menu responsive y link a contacto*/
+.burguer, .contacto{
+    display: none;
+}
+
+/*logo*/
+.logo-top{
+    width: 250px;
+    height: auto;
+}
+
+/*lista con links de navegacion*/
+.links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+/*links*/
+.links a{
+    text-decoration: none;
+    font-family: var(--font-texto);
+    color: var(--color-blanco);
+    font-size: clamp(1rem, 0.6832rem + 0.6601vw, 1.5rem);
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+}
+
+.links a:hover{
+    color: var(--color-claro);
+    transition: all ease-in-out 0.3s;
+}
+
+/*boton de contacto*/
+.btn a{
+    text-decoration: none;
+    font-family: var(--font-texto);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-blanco);
+    padding: 0.7rem 1.4rem;
+    background: var(--color-oscuro);
+    border-radius: 35px;
+    border: 3px solid var(--color-blanco);
+    transition: all ease-in-out 0.3s;
+}
+
+/*flecha dentro del boton*/
+.nav .btn a img{
+    width: 17px;
+    height: auto;
+}
+
+.btn a:hover{
+    transition: all ease-in-out 0.3s;
+    background: rgb(0, 179, 83);
+}
+
+
+/*diseño adaptable*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+
+    /*contenedor principal*/
+    .nav{
+        gap: 0.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    /*logo*/
+    .logo-top{
+        width: 200px;
+        height: auto;
+    }
+
+    /*boton de contacto*/
+    .btn a{
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.7rem 1rem;
+    }
+
+    .btn a img{
+        width: 14px;
+        height: auto;
+    }
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+
+    .nav{
+        min-height: 100px;
+        background-color: #005226;
+        padding: 0.7rem 1.5rem;
+        position: fixed;
+    }
+
+    /*logo*/
+    .logo-top{
+        width: 150px;
+        height: auto;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .burguer, .contacto{
+        display: flex;
+    }
+
+    /*links*/
+    .links {
+        position: absolute;
+        top: -700px;
+        right: -2000px;
+        text-align: center;
+        padding: 1.5rem ;
+    }
+
+    .links a{
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: right;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .links a:hover{
+        color: var(--color-claro);
+        transition: all ease-in-out 0.3s;
+    }
+
+    .links.active{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        right: 0;
+        top: 100px;
+        background: #005226;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .nav{
+        min-height: 90px;
+        padding: 1rem;
+    }
+
+    .links.active{
+        top: 90px;
+    }
+
+    /*logo*/
+    .logo-top{
+        width: 130px;
+        height: auto;
+    }
+
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+
+    .nav{
+        min-height: 80px;
+    }
+
+    .links.active{
+        top: 80px;
+    }
+
+    /*logo*/
+    .logo-top{
+        width: 120px;
+        height: auto;
+    }
+}
+
+

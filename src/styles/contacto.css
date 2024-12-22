@@ -1,0 +1,277 @@
+/*contenedor del componente*/
+.cp-contacto{
+    width: 100%;
+    min-height: 80svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+/*tarjeta*/
+.tarjeta-contacto{
+    width: 100%;
+    height: 650px;
+    background-image: url('/contacto_bg.webp');
+    background-position: center;
+    background-size: cover;
+    border-radius: 35px;
+}
+
+/*degradado*/
+.mascara{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(28deg, rgba(0, 0, 0, 0.99) 0%, rgba(232, 232, 232, 0) 100%);
+    border-radius: 35px;
+    padding-left: 3vw;
+}
+
+/*titulo*/
+.mascara h2{
+    font-family: var(--font-titulo);
+    color: var(--color-blanco);
+    font-size: clamp(3rem, 1.7327rem + 2.6403vw, 5rem);
+    font-weight: 600;
+    line-height: 3.5rem;
+}
+
+/*linea debajo del titulo*/
+.mascara .linea{
+    background: var(--color-blanco);
+    height: 4px;
+    width: 290px;
+    margin: 1rem 0;
+}
+
+/*texto*/
+.mascara p{
+    font-family: var(--font-texto);
+    font-size: clamp(1.5rem, 1.1832rem + 0.6601vw, 2rem);
+    font-weight: 500;
+    text-align: left;
+    max-width: 610px;
+    color: var(--color-blanco);
+}
+
+/*formulario*/
+.mascara form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 31%;
+}
+
+/*casilla para ingresar teléfono*/
+.mascara form input{
+    background: rgb(234, 240, 234, 0.6);
+    font-family: var(--font-texto);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-negro);
+    max-width: 100%;
+    padding: 1rem 0.5rem;
+    border-radius: 14.5px;
+}
+
+.mascara form input::placeholder{
+    color: #3c3f3b;
+    font-weight: 600;
+}
+
+/*ocultar flechas para completar numeros*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*botón enviar*/
+.mascara form button{
+    font-family: var(--font-texto);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-blanco);
+    padding: 0.7rem 1.4rem;
+    background: var(--color-oscuro);
+    border-radius: 35px;
+    border: 3px solid var(--color-blanco);
+    transition: all ease-in-out 0.3s;
+    max-width: 170px;
+    cursor: pointer;
+}
+
+/*flecha dentro del botón*/
+.mascara form button img{
+    width: 13px;
+    height: auto;
+}
+
+.mascara form button:hover{
+    transition: all ease-in-out 0.3s;
+    background: rgb(0, 179, 83);
+}
+
+
+
+/*diseño adaptable*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+    /*contenedor del componente*/
+    .cp-contacto{
+        padding: 3rem 2rem;
+    }
+
+    /*tarjeta*/
+    .tarjeta-contacto{
+        width: 100%;
+        height: 500px;
+    }
+
+    /*linea debajo del titulo*/
+    .mascara .linea{
+        width: 240px;
+    }
+
+    /*formulario*/
+    .mascara form{
+        margin-top: 1.5rem;
+        gap: 1rem;
+        width: 41%;
+    }
+
+    /*casilla para ingresar teléfono*/
+    .mascara form input{
+        font-size: 1.1rem;
+    }
+
+    .mascara form input::placeholder{
+        font-weight: 600;
+    }
+
+    /*botón enviar*/
+    .mascara form button{
+        font-size: 1.1rem;
+        border: 2px solid var(--color-blanco);
+        padding: 0.5rem 0.7rem;
+        max-width: 130px;
+    }
+
+    /*flecha dentro del botón*/
+    .mascara form button img{
+        width: 11px;
+        height: auto;
+    }
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+
+    /*contenedor del componente*/
+    .cp-contacto{
+        padding: 3rem 1.5rem;
+    }
+
+    /*tarjeta*/
+    .tarjeta-contacto{
+        width: 100%;
+        height: 400px;
+    }
+
+    /*linea debajo del titulo*/
+    .mascara .linea{
+        width: 200px;
+    }
+
+    /*formulario*/
+    .mascara form{
+        width: 55%;
+    }
+
+    /*casilla para ingresar teléfono*/
+    .mascara form input{
+        font-size: 1rem;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    /*contenedor del componente*/
+    .cp-contacto{
+        min-height: 50svh;
+        padding: 3rem 1rem;
+    }
+
+    /*tarjeta*/
+    .tarjeta-contacto{
+        width: 100%;
+        height: 350px;
+    }
+
+    .mascara{
+        padding: 0;
+        padding: 0 2.5vw;
+    }
+
+    .mascara h2{
+        line-height: 2.5rem;
+        font-size: clamp(2.4rem, 2.0082rem + 1.6495vw, 2.8rem);
+    }
+
+    .mascara p{
+        max-width: 500px;
+        font-size: clamp(1.1rem, 0.9041rem + 0.8247vw, 1.3rem);
+    }
+
+    .mascara .linea{
+        margin: 0.5rem 0;
+        height: 3px;
+    }
+
+    /*formulario*/
+    .mascara form{
+        width: 400px;
+    }
+
+    /*botón enviar*/
+    .mascara form button{
+        font-size: 1rem;
+        max-width: 110px;
+    }
+
+    /*flecha dentro del botón*/
+    .mascara form button img{
+        width: 10px;
+        height: auto;
+    }
+
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+    /*contenedor del componente*/
+    .cp-contacto{
+        min-height: auto;
+        padding: 3rem 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /*tarjeta*/
+    .tarjeta-contacto{
+        width: 100%;
+        height: 300px;
+    }
+
+    /*formulario*/
+    .mascara form{
+        width: 100%;
+    }
+}
