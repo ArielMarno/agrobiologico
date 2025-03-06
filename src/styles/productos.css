@@ -1,7 +1,7 @@
 /*contendor del componente*/
 .productos{
     position: relative;
-    min-height: 100svh;
+    min-height: 1080px;
     overflow: hidden;
     margin-top: -50px;
     padding: 3rem 0;
@@ -9,12 +9,12 @@
 
 /*titulo de la sección*/
 .productos h2{
-    max-width: 100%;
+    max-width: 1250px;
     font-family: var(--font-titulo);
     font-size: clamp(3rem, 1.7327rem + 2.6403vw, 5rem);
     font-weight: 600;
     color: var(--color-negro);
-    padding-left: 10vw;
+    padding-left: 3rem;
     margin-top: 3rem;
 }
 
@@ -103,7 +103,7 @@
     padding: 0.2rem;
     border: none;
     color: var(--color-oscuro);
-    border-bottom: 3px solid var(--color-oscuro);
+    border-bottom: 2px solid var(--color-oscuro);
     background-color: transparent;
     font-size: clamp(1rem, 0.8733rem + 0.264vw, 1.2rem);
     font-weight: 650;
@@ -252,9 +252,17 @@
 
 /* detalles*/
 .productos .lista .item .detalles{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     opacity: 0;
     pointer-events: none;
 }
+
+.productos .lista .item .detalles .descripcion{
+    padding-right: 0.2rem;
+}
+
 
 /* transición "VER MAS" */
 .productos.mostrar-detalles .lista .item:nth-child(3),
@@ -327,7 +335,7 @@
     font-weight: bold;
 }
 
-.productos.productos.mostrar-detalles .lista .item:nth-child(2) .consulta a{
+.productos.mostrar-detalles .lista .item:nth-child(2) .consulta a{
     text-decoration: none;
     font-family: var(--font-texto);
     font-size: clamp(1rem, 0.8733rem + 0.264vw, 1.2rem);
@@ -366,7 +374,7 @@
 /*flechas*/
 .flechas{
     position: absolute;
-    bottom: 8svh;
+    bottom: 20svh;
     width: 1140px;
     max-width: 90%;
     display: flex;
@@ -381,6 +389,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: 2px solid var(--color-oscuro);
     font-family: var(--font-titulo);
     font-size: clamp(1.2rem, 1.0099rem + 0.396vw, 1.5rem);
     font-weight: 600;
@@ -406,7 +415,7 @@
     transform: translateX(-50%);
     border: none;
     color: var(--color-oscuro);
-    border-bottom: 3px solid var(--color-oscuro);
+    border-bottom: 2px solid var(--color-oscuro);
     font-family: var(--font-texto);
     font-size: clamp(1rem, 0.8733rem + 0.264vw, 1.2rem);
     font-weight: 700;
@@ -480,7 +489,7 @@
 @media screen and (max-width: 1023px){
 
     .productos{
-        min-height: 90svh;
+        padding-top: 5rem;
     }
 
     /*titulo de la sección*/
@@ -507,6 +516,7 @@
     #siguiente{
         width: 35px;
         height: 35px;
+        border: 1px solid var(--color-oscuro);
     }
 }
 
@@ -524,7 +534,7 @@
 @media screen and (max-width: 768px){
 
     .productos{
-        min-height: 80svh;
+        min-height: 700px;
         padding: 3rem 1rem;
     }
 
@@ -540,6 +550,13 @@
     
     .productos .lista{
         height: 50%;
+    }
+
+    .productos .lista .item .introduccion{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
     /*boton "VER MAS"*/
@@ -591,10 +608,20 @@
 }
 
 @media screen and (max-width: 480px){
+
     /*flechas*/
-    .arrows{
-        bottom: 5svh;
+    .flechas{
         max-width: 90%;
+    }
+
+    #anterior,
+    #siguiente{
+        width: 30px;
+        height: 30px;
+    }
+
+    #atras{
+        font-size: 0.8rem;
     }
 }
 
@@ -624,6 +651,10 @@
 
     .productos.mostrar-detalles .lista .item:nth-child(2) .detalles .descripcion{
         font-size: 0.9rem;
+    }
+
+    .flechas{
+        bottom: 55px;
     }
 
 }

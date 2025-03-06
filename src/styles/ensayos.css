@@ -201,7 +201,7 @@
 
     .card-col h3, .card-row h3{
         font-size: 3rem;
-        line-height: 6svh;
+        line-height: 40px;
         max-width: 100%;
         text-align: center;
         align-self: center;
@@ -231,6 +231,7 @@
     }
 
     .card-col h3, .card-row h3{
-        line-height: 7svh;
+        line-height: 7vh;
     }
+
 }

@@ -88,7 +88,7 @@
     display: block;
     content: '';
     margin-top: 0.2rem;
-    border-bottom: solid 3px var(--color-claro);
+    border-bottom: solid 2px var(--color-claro);
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
